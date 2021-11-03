@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import{FaRegHeart} from 'react-icons/fa'
 
+
 const CardPeople = ({name,parametro}) => {
     return(
     <div className="card mb-3" style={{position:"static"}}>

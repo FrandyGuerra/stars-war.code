@@ -1,6 +1,8 @@
 import {Link} from 'react-router-dom';
 
+
 const NavBar = () => {
+    
     return (
         <nav className="navbar navbar-expand-md navbar-light bg-warning"
         style={{position:"fixed",top:"0px",width:"100%",height:"80px"}}>

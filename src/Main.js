@@ -6,6 +6,8 @@ import Footer from './components/Footer'
 import DetailsPeople from "./views/DetailsPeople";
 import DetailsPlanet from "./views/DetailsPlanet";
 import DetailsVehicle from "./views/DetailsVehicle";
+import injectContext from "./store/appContext";
+
 
 const Main = () => {
     return (
@@ -24,4 +26,4 @@ const Main = () => {
     )
 }
 
-export default Main;
+export default injectContext(Main);
