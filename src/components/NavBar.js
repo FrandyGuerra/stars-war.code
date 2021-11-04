@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import Favoritos from './Favoritos';
 
 
 const NavBar = () => {
@@ -17,14 +18,7 @@ const NavBar = () => {
                 </div>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 
-                        <span className="nav-item dropdown btn btn-dark">
-                            <Link className="nav-link dropdown-toggle text-white" to="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Favorites  <span style={{display:"inline-block",width:"15px",background:"yellow",color:"black",borderRadius:"4px"}}>{` 0`}</span>
-                            </Link>
-                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><Link className="dropdown-item" to="">Lista de Favoritos</Link></li>
-                            </ul>
-                        </span>
+                        <Favoritos/>
                         
                 </div>
             </div>

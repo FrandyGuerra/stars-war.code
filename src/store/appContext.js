@@ -18,7 +18,7 @@ const injectContext = PassedComponent =>{
 
         //Apenas Arranque la aplicacion quiere que se ejecuten estas funciones
         useEffect(()=>{
-
+            
         },[])
         return(
             <Context.Provider value={state}>
