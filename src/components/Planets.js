@@ -32,8 +32,8 @@ const Planets=()=>{
     }
     return(
         <>
-        <h1>Planets</h1>
-        <div className="row">
+        <h1 className="mb-4">Planets</h1>
+        <div className="row row-cols-1 row-cols-md-3 flex-nowrap overflow-auto mb-4">
             {
                 planets.map((planet)=>{
                     return(

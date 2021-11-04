@@ -34,8 +34,8 @@ const Peoples=()=>{
     }
     return(
         <>
-        <h1>Peoples</h1>
-        <div className="row">
+        <h1 className="mb-4">Peoples</h1>
+        <div className="row row-cols-1 row-cols-md-3 flex-nowrap overflow-auto mb-4">
             {
                 people.map((per)=>{
                     return(
