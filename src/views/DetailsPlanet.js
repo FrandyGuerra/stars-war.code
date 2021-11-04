@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams,useHistory } from "react-router-dom";
 
 const DetailsPlanet = () => {
     const [planet,setPlanet]=useState([]);
     const [description,setDescription]=useState("");
     const {planet_id} =useParams();
+    const history = useHistory();
 
     const getDetailPlanet=()=>{
         fetch(`https://www.swapi.tech/api/planets/${planet_id}`, {
@@ -39,7 +40,7 @@ const DetailsPlanet = () => {
         <div className="card mb-3" style={{ marginTop: "100px",maxWidth: "540px" }}>
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="..."/>
+                        <img src={planet_id==1?`https://i.pinimg.com/originals/28/4c/7a/284c7a4c72d1009cf622823745aead9e.jpg`:`https://starwars-visualguide.com/assets/img/planets/${planet_id}.jpg`} class="img-fluid rounded-start" alt="..."/>
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
@@ -60,6 +61,7 @@ const DetailsPlanet = () => {
                     </div>
                 </div>
         </div>
+        <button onClick={history.goBack} className="btn btn-warning">Regresar</button>
         </div>
     )
 

@@ -6,7 +6,7 @@ import{FaRegHeart} from 'react-icons/fa'
 const CardPeople = ({name,parametro}) => {
     return(
     <div className="card mb-3" style={{position:"static"}}>
-        <img src="https://estaticos-cdn.elperiodico.com/clip/6ab0bc3e-09ea-47ca-8240-8fddd9668310_alta-libre-aspect-ratio_default_0.jpg" className="" alt="..."/>
+        <img src={`https://starwars-visualguide.com/assets/img/characters/${parametro}.jpg`} className="" alt="..."/>
         <div className ="card-body">
         <h2 className ="card-title">{name} </h2>
         <h6>Gender: <span>hola</span></h6>

@@ -1,11 +1,12 @@
 import React from 'react'
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams,useHistory } from "react-router-dom";
 
 const DetailsVehicle = () => {
     const [vehicle,setVehicle]=useState([]);
     const [description,setDescription]=useState("");
     const {vehicle_id} =useParams();
+    const history =useHistory();
 
     const getDetailVehicle=()=>{
         fetch(`https://www.swapi.tech/api/vehicles/${vehicle_id}`)
@@ -28,7 +29,7 @@ const DetailsVehicle = () => {
         <div className="card mb-3" style={{ marginTop: "100px",maxWidth: "540px" }}>
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="..."/>
+                        <img src={`https://starwars-visualguide.com/assets/img/vehicles/${vehicle_id}.jpg`} class="img-fluid rounded-start" alt="..."/>
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
@@ -50,6 +51,7 @@ const DetailsVehicle = () => {
                     </div>
                 </div>
         </div>
+        <button onClick={history.goBack} className="btn btn-warning">Regresar</button>
         </div>
     )
 

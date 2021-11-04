@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router-dom";
 
 const DetailsPeople = () => {
     const [persona,setPersona]=useState([]);
     const [description,setDescription]=useState("");
     const {people_id} =useParams();
+    const history = useHistory();
 
     const getDetailPeople=()=>{
         fetch(`https://www.swapi.tech/api/people/${people_id}`, {
@@ -39,7 +40,7 @@ const DetailsPeople = () => {
         <div className="card mb-3" style={{ marginTop: "100px",maxWidth: "540px" }}>
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="..."/>
+                        <img src={`https://starwars-visualguide.com/assets/img/characters/${people_id}.jpg`} class="img-fluid rounded-start" alt="..."/>
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
@@ -58,8 +59,8 @@ const DetailsPeople = () => {
                         </div>
                     </div>
                 </div>
-        
         </div>
+                    <button onClick={history.goBack} className="btn btn-warning">Regresar</button>
         </div>
     )
 
