@@ -37,12 +37,12 @@ const DetailsPeople = () => {
     },[])
     return (
         <div className="container">
-        <div className="card mb-3" style={{ marginTop: "100px",maxWidth: "540px" }}>
-                <div className="row g-0">
+        <div className="card mb-3" style={{ marginTop: "100px",maxWidth: "1000px", position:"static", height:"440px"}}>
+                <div className="row">
                     <div className="col-md-4">
-                        <img src={`https://starwars-visualguide.com/assets/img/characters/${people_id}.jpg`} class="img-fluid rounded-start" alt="..."/>
+                        <img style={{ height: "440px"}} src={`https://starwars-visualguide.com/assets/img/characters/${people_id}.jpg`} class="img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-6">
                         <div className="card-body">
                             <h5 className="card-title">{persona.name}</h5>
                             <h6>Descripcion: <span className="card-text">{description}</span></h6>

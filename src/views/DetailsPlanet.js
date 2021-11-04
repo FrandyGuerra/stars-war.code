@@ -37,12 +37,12 @@ const DetailsPlanet = () => {
     },[])
     return (
         <div className="container">
-        <div className="card mb-3" style={{ marginTop: "100px",maxWidth: "540px" }}>
-                <div className="row g-0">
-                    <div className="col-md-4">
+        <div className="card mb-3" style={{ marginTop: "100px",maxWidth: "1000px", position:"static" }}>
+                <div className="row">
+                    <div className="col-md-6">
                         <img src={planet_id==1?`https://i.pinimg.com/originals/28/4c/7a/284c7a4c72d1009cf622823745aead9e.jpg`:`https://starwars-visualguide.com/assets/img/planets/${planet_id}.jpg`} class="img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-6">
                         <div className="card-body">
                             <h2 className="card-title">{planet.name}</h2>
                             <h6>Descripcion: <span className="card-text">{description}</span></h6>

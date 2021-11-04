@@ -26,12 +26,12 @@ const DetailsVehicle = () => {
     },[])
     return (
         <div className="container">
-        <div className="card mb-3" style={{ marginTop: "100px",maxWidth: "540px" }}>
-                <div className="row g-0">
-                    <div className="col-md-4">
+        <div className="card mb-3" style={{ marginTop: "100px",maxWidth: "1000px", position:"static" }}>
+                <div className="row ">
+                    <div className="col-md-6">
                         <img src={`https://starwars-visualguide.com/assets/img/vehicles/${vehicle_id}.jpg`} class="img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-6">
                         <div className="card-body">
                             <h2 className="card-title">{vehicle.name}</h2>
                             <h6>Description: <span className="card-text">{description}</span></h6>
